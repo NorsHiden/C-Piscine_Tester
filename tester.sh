@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 11:59:30 by nors              #+#    #+#              #
-#    Updated: 2022/07/13 18:05:36 by nors             ###   ########.fr        #
+#    Updated: 2022/07/13 20:24:16 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ if [ -z $CHOSEN_LETTER ]; then
 fi
 
 if [ $CHOSEN_LETTER = "a" ]; then
-	shell00/shell00_tester.sh
+	bash shell00/shell00_tester.sh
 else
 	echo "Invalid input"
 fi

@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 14:05:03 by nors              #+#    #+#              #
-#    Updated: 2022/07/13 19:47:24 by nors             ###   ########.fr        #
+#    Updated: 2022/07/13 23:49:22 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -129,9 +129,19 @@ TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex02/ | awk 'NR>2{printf("%s\n", $1
 USER_OUTPUT=$(ls -l shell00/user_shell00/ex02/ | awk 'NR>2{printf("%s\n", $1)}')
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> File Permissions [OK]"
+	echo "--> Files Permissions [OK]"
 else
-	echo "--> File Permissions [KO]"
+	echo "--> Files Permissions [KO]"
+fi
+echo
+
+TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex02/ | awk 'NR>2{printf("%s\n", $2)}')
+USER_OUTPUT=$(ls -l shell00/user_shell00/ex02/ | awk 'NR>2{printf("%s\n", $2)}')
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	echo "--> Files Links [OK]"
+else
+	echo "--> Files Links [KO]"
 fi
 echo
 
@@ -139,9 +149,9 @@ TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex02 | awk 'NR>2{printf("%s\n", $5)
 USER_OUTPUT=$(ls -l shell00/user_shell00/ex02 | awk 'NR>2{printf("%s\n", $5)}')
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> File Size [OK]"
+	echo "--> Files Size [OK]"
 else
-	echo "--> File Size [KO]"
+	echo "--> Files Size [KO]"
 fi
 echo
 
@@ -149,9 +159,9 @@ TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex02 | awk 'NR>2{printf("%s %s %s\n
 USER_OUTPUT=$(ls -l shell00/user_shell00/ex02 | awk 'NR>2{printf("%s %s %s\n", $6, $7, $8)}')
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> File Date [OK]"
+	echo "--> Files Date [OK]"
 else
-	echo "--> File Date [KO]"
+	echo "--> Files Date [KO]"
 fi
 echo
 
