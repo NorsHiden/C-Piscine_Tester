@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 14:05:03 by nors              #+#    #+#              #
-#    Updated: 2022/07/14 00:19:00 by nors             ###   ########.fr        #
+#    Updated: 2022/07/14 00:32:53 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ fi
 printf "\n"
 
 printf $PURPLE"-------------> [TESTING_EX01...] <-------------\n"$RESET
-printf"\n"
+printf "\n"
 
 tar -xf shell00/tester_shell00/ex01/testShell00.tar -C shell00/tester_shell00/ex01 &> /dev/null
 tar -xf shell00/user_shell00/ex01/testShell00.tar -C shell00/user_shell00/ex01 &> /dev/null
@@ -168,7 +168,7 @@ printf "\n"
 rm -rf shell00/tester_shell00/ex02/test{0..6}
 rm -rf shell00/user_shell00/ex02/test{0..6}
 
-printf "-------------> [TESTING_EX03...] <-------------\n"$RESET
+printf $PURPLE"-------------> [TESTING_EX03...] <-------------\n"$RESET
 printf "\n"
 
 TESTER_OUTPUT=$(ls shell00/tester_shell00/ex03)
@@ -329,7 +329,11 @@ if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
 else
 	printf $RED"--> Expected Output [KO]\n"$RESET
 fi
-printf
+printf "\n"
+
+find shell00/tester_shell00/ex08/ -not \( -name 'clean' -or -name '*ex08' \) -delete
+find shell00/user_shell00/ex08/ -not \( -name 'clean' -or -name '*ex08' \) -delete
+
 
 printf $PURPLE"-------------> [TESTING_EX09...] <-------------\n"$RESET
 printf "\n"

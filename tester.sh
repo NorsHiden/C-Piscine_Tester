@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 11:59:30 by nors              #+#    #+#              #
-#    Updated: 2022/07/13 20:24:16 by nors             ###   ########.fr        #
+#    Updated: 2022/07/14 00:44:02 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,20 @@ PURPLE="\033[38;2;255;105;180m"
 WHITE="\033[1;37m"
 RESET="\033[0m"
 
-echo "Please select a letter bellow:"
-echo "a) shell00"
+printf "\n"
+printf $PURPLE" ██████╗ ██████╗ ██╗███████╗ ██████╗██╗███╗   ██╗███████╗ ████████╗███████╗███████╗████████╗███████╗██████╗ \n"$RESET
+printf $PURPLE"██╔════╝ ██╔══██╗██║██╔════╝██╔════╝██║████╗  ██║██╔════╝ ╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝██╔════╝██╔══██╗\n"$RESET
+printf $PURPLE"██║      ██████╔╝██║███████╗██║     ██║██╔██╗ ██║█████╗█████╗██║   █████╗  ███████╗   ██║   █████╗  ██████╔╝\n"$RESET
+printf $PURPLE"██║      ██╔═══╝ ██║╚════██║██║     ██║██║╚██╗██║██╔══╝╚════╝██║   ██╔══╝  ╚════██║   ██║   ██╔══╝  ██╔══██╗\n"$RESET
+printf $PURPLE"╚██████╗ ██║     ██║███████║╚██████╗██║██║ ╚████║███████╗    ██║   ███████╗███████║   ██║   ███████╗██║  ██║\n"$RESET
+printf $PURPLE" ╚═════╝ ╚═╝     ╚═╝╚══════╝ ╚═════╝╚═╝╚═╝  ╚═══╝╚══════╝    ╚═╝   ╚══════╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝\n"$RESET
+printf "\n"
+printf $PURPLE"=============================================================================================================\n"$RESET
+printf "\n"
 
+printf $BLUE"Please select a letter bellow:\n"$RESET
+printf $YELLOW"a) shell00\n"$RESET
+printf $PURPLE"Other days comming soon...\n"$RESET
 
 read -p "> " CHOSEN_LETTER
 
@@ -33,5 +44,5 @@ fi
 if [ $CHOSEN_LETTER = "a" ]; then
 	bash shell00/shell00_tester.sh
 else
-	echo "Invalid input"
+	printf $RED"Invalid input\n"$RESET
 fi
