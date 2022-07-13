@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 14:05:03 by nors              #+#    #+#              #
-#    Updated: 2022/07/13 23:49:22 by nors             ###   ########.fr        #
+#    Updated: 2022/07/14 00:19:00 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,13 +20,13 @@ PURPLE="\033[38;2;255;105;180m"
 WHITE="\033[1;37m"
 RESET="\033[0m"
 
-echo "_______________  SHELL00  _______________"
-echo
+printf $YELLOW"_______________  SHELL00  _______________\n"$RESET
+printf "\n"
 
 sleep 1
 
-echo "-------------> [TESTING_EX00...] <-------------"
-echo
+printf $PURPLE"-------------> [TESTING_EX00...] <-------------\n"$RESET
+printf "\n"
 
 ls shell00/tester_shell00/ex00 > shell00/output/tester_shell00_ex00_expected_files
 ls shell00/user_shell00/ex00 > shell00/output/user_shell00_ex00_expected_files
@@ -35,11 +35,11 @@ ls shell00/user_shell00/ex00 > shell00/output/user_shell00_ex00_expected_files
 < shell00/output/user_shell00_ex00_expected_files read USER_OUTPUT
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Files [OK]"
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
 else
-	echo "--> Expected Files [KO]"
+	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 cat shell00/tester_shell00/ex00/z > shell00/output/tester_shell00_ex00_content
 cat shell00/user_shell00/ex00/z > shell00/output/user_shell00_ex00_content
@@ -48,14 +48,14 @@ TESTER_OUTPUT="shell00/output/tester_shell00_ex00_content"
 USER_OUTPUT="shell00/output/user_shell00_ex00_content"
 
 if cmp -s $TESTER_OUTPUT $USER_OUTPUT; then
-	echo "--> File Content [OK]"
+	printf $GREEN"--> File Content [OK]\n"$RESET
 else
-	echo "--> File Content [KO]"
+	printf $RED"--> File Content [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
-echo "-------------> [TESTING_EX01...] <-------------"
-echo
+printf $PURPLE"-------------> [TESTING_EX01...] <-------------\n"$RESET
+printf"\n"
 
 tar -xf shell00/tester_shell00/ex01/testShell00.tar -C shell00/tester_shell00/ex01 &> /dev/null
 tar -xf shell00/user_shell00/ex01/testShell00.tar -C shell00/user_shell00/ex01 &> /dev/null
@@ -67,47 +67,47 @@ ls shell00/user_shell00/ex01 > shell00/output/user_shell00_ex01_expected_files
 < shell00/output/user_shell00_ex01_expected_files read USER_OUTPUT
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Files [OK]"
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
 else
-	echo "--> Expected Files [KO]"
+	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex01/testShell00 | awk '{printf("%s\n", $1)}')
 USER_OUTPUT=$(ls -l shell00/user_shell00/ex01/testShell00 | awk '{printf("%s\n", $1)}')
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> File Permissions [OK]"
+	printf $GREEN"--> File Permissions [OK]\n"$RESET
 else
-	echo "--> File Permissions [KO]"
+	printf $RED"--> File Permissions [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex01/testShell00 | awk '{printf("%s\n", $5)}')
 USER_OUTPUT=$(ls -l shell00/user_shell00/ex01/testShell00 | awk '{printf("%s\n", $5)}')
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> File Size [OK]"
+	printf $GREEN"--> File Size [OK]\n"$RESET
 else
-	echo "--> File Size [KO]"
+	printf $RED"--> File Size [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex01/testShell00 | awk '{printf("%s %s %s\n", $6, $7, $8)}')
 USER_OUTPUT=$(ls -l shell00/user_shell00/ex01/testShell00 | awk '{printf("%s %s %s\n", $6, $7, $8)}')
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> File Date [OK]"
+	printf $GREEN"--> File Date [OK]\n"$RESET
 else
-	echo "--> File Date [KO]"
+	printf $RED"--> File Date [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 rm -f shell00/tester_shell00/ex01/testShell00
 rm -f shell00/user_shell00/ex01/testShell00
 
-echo "-------------> [TESTING_EX02...] <-------------"
-echo
+printf $PURPLE"-------------> [TESTING_EX02...] <-------------\n"$RESET
+printf "\n"
 
 tar -xf shell00/tester_shell00/ex02/exo2.tar -C shell00/tester_shell00/ex02 &> /dev/null
 tar -xf shell00/user_shell00/ex02/exo2.tar -C shell00/user_shell00/ex02 &> /dev/null
@@ -119,67 +119,67 @@ ls shell00/user_shell00/ex02 > shell00/output/user_shell00_ex02_expected_files
 < shell00/output/user_shell00_ex02_expected_files read USER_OUTPUT
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Files [OK]"
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
 else
-	echo "--> Expected Files [KO]"
+	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex02/ | awk 'NR>2{printf("%s\n", $1)}')
 USER_OUTPUT=$(ls -l shell00/user_shell00/ex02/ | awk 'NR>2{printf("%s\n", $1)}')
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Files Permissions [OK]"
+	printf $GREEN"--> Files Permissions [OK]\n"$RESET
 else
-	echo "--> Files Permissions [KO]"
+	printf $RED"--> Files Permissions [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex02/ | awk 'NR>2{printf("%s\n", $2)}')
 USER_OUTPUT=$(ls -l shell00/user_shell00/ex02/ | awk 'NR>2{printf("%s\n", $2)}')
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Files Links [OK]"
+	printf $GREEN"--> Files Links [OK]\n"$RESET
 else
-	echo "--> Files Links [KO]"
+	printf $RED"--> Files Links [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex02 | awk 'NR>2{printf("%s\n", $5)}')
 USER_OUTPUT=$(ls -l shell00/user_shell00/ex02 | awk 'NR>2{printf("%s\n", $5)}')
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Files Size [OK]"
+	printf $GREEN"--> Files Size [OK]\n"$RESET
 else
-	echo "--> Files Size [KO]"
+	printf $RED"--> Files Size [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT=$(ls -l shell00/tester_shell00/ex02 | awk 'NR>2{printf("%s %s %s\n", $6, $7, $8)}')
 USER_OUTPUT=$(ls -l shell00/user_shell00/ex02 | awk 'NR>2{printf("%s %s %s\n", $6, $7, $8)}')
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Files Date [OK]"
+	printf $GREEN"--> Files Date [OK]\n"$RESET
 else
-	echo "--> Files Date [KO]"
+	printf $RED"--> Files Date [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 rm -rf shell00/tester_shell00/ex02/test{0..6}
 rm -rf shell00/user_shell00/ex02/test{0..6}
 
-echo "-------------> [TESTING_EX03...] <-------------"
-echo
+printf "-------------> [TESTING_EX03...] <-------------\n"$RESET
+printf "\n"
 
 TESTER_OUTPUT=$(ls shell00/tester_shell00/ex03)
 USER_OUTPUT=$(ls shell00/user_shell00/ex03)
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Files [OK]"
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
 else
-	echo "--> Expected Files [KO]"
+	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 cat ~/.ssh/id_rsa.pub > shell00/tester_shell00/ex03/id_rsa_pub
 
@@ -187,25 +187,25 @@ TESTER_OUTPUT="shell00/tester_shell00/ex03/id_rsa_pub"
 USER_OUTPUT="shell00/user_shell00/ex03/id_rsa_pub"
 
 if cmp -s $TESTER_OUTPUT $USER_OUTPUT; then
-	echo "--> File Content [OK]"
+	printf $GREEN"--> File Content [OK]\n"$RESET
 else
-	echo "--> File Content [KO]"
+	printf $RED"--> File Content [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 
-echo "-------------> [TESTING_EX04...] <-------------"
-echo
+printf $PURPLE"-------------> [TESTING_EX04...] <-------------\n"$RESET
+printf "\n"
 
 TESTER_OUTPUT=$(ls shell00/tester_shell00/ex04)
 USER_OUTPUT=$(ls shell00/user_shell00/ex04)
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Files [OK]"
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
 else
-	echo "--> Expected Files [KO]"
+	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 CURRENT_PWD=$(pwd)
 
@@ -217,95 +217,95 @@ USER_OUTPUT=$(bash $CURRENT_PWD/shell00/user_shell00/ex04/midLS)
 cd $CURRENT_PWD
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Output [OK]"
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
 else
-	echo "--> Expected Output [KO]"
+	printf $RED"--> Expected Output [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
-echo "-------------> [TESTING_EX05...] <-------------"
-echo
+printf $PURPLE"-------------> [TESTING_EX05...] <-------------\n"$RESET
+printf "\n"
 
 TESTER_OUTPUT=$(ls shell00/tester_shell00/ex05)
 USER_OUTPUT=$(ls shell00/user_shell00/ex05)
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Files [OK]"
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
 else
-	echo "--> Expected Files [KO]"
+	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT=$(bash shell00/tester_shell00/ex05/git_commit.sh)
 USER_OUTPUT=$(bash shell00/user_shell00/ex05/git_commit.sh)
 
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Output [OK]"
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
 else
-	echo "--> Expected Output [KO]"
+	printf $RED"--> Expected Output [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
-echo "-------------> [TESTING_EX06...] <-------------"
-echo
+printf $PURPLE"-------------> [TESTING_EX06...] <-------------\n"$RESET
+printf "\n"
 
 TESTER_OUTPUT=$(ls shell00/tester_shell00/ex06)
 USER_OUTPUT=$(ls shell00/user_shell00/ex06)
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Files [OK]"
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
 else
-	echo "--> Expected Files [KO]"
+	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT=$(bash shell00/tester_shell00/ex06/git_ignore.sh)
 USER_OUTPUT=$(bash shell00/user_shell00/ex06/git_ignore.sh)
 
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Output [OK]"
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
 else
-	echo "--> Expected Output [KO]"
+	printf $RED"--> Expected Output [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
-echo "-------------> [TESTING_EX07...] <-------------"
-echo
+printf $PURPLE"-------------> [TESTING_EX07...] <-------------\n"$RESET
+printf "\n"
 
 TESTER_OUTPUT=$(ls shell00/tester_shell00/ex07)
 USER_OUTPUT=$(ls shell00/user_shell00/ex07)
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Files [OK]"
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
 else
-	echo "--> Expected Files [KO]"
+	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT="shell00/tester_shell00/ex07/b"
 USER_OUTPUT="shell00/user_shell00/ex07/b"
 
 if cmp -s $TESTER_OUTPUT $USER_OUTPUT; then
-	echo "--> Expected Output [OK]"
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
 else
-	echo "--> Expected Output [KO]"
+	printf $RED"--> Expected Output [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
-echo "-------------> [TESTING_EX08...] <-------------"
-echo
+printf $PURPLE"-------------> [TESTING_EX08...] <-------------\n"$RESET
+printf "\n"
 
 TESTER_OUTPUT=$(ls shell00/tester_shell00/ex08)
 USER_OUTPUT=$(ls shell00/user_shell00/ex08)
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Files [OK]"
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
 else
-	echo "--> Expected Files [KO]"
+	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 cp -R shell00/output/original_ex08_test/* shell00/tester_shell00/ex08/
 cp -R shell00/output/original_ex08_test/* shell00/user_shell00/ex08/
@@ -315,41 +315,41 @@ USER_OUTPUT=$(bash shell00/user_shell00/ex08/clean)
 
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Output [OK]"
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
 else
-	echo "--> Expected Output [KO]"
+	printf $RED"--> Expected Output [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT=$(ls shell00/tester_shell00/ex08)
 USER_OUTPUT=$(ls shell00/user_shell00/ex08)
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Output [OK]"
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
 else
-	echo "--> Expected Output [KO]"
+	printf $RED"--> Expected Output [KO]\n"$RESET
 fi
-echo
+printf
 
-echo "-------------> [TESTING_EX09...] <-------------"
-echo
+printf $PURPLE"-------------> [TESTING_EX09...] <-------------\n"$RESET
+printf "\n"
 
 TESTER_OUTPUT=$(ls shell00/tester_shell00/ex09)
 USER_OUTPUT=$(ls shell00/user_shell00/ex09)
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	echo "--> Expected Files [OK]"
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
 else
-	echo "--> Expected Files [KO]"
+	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
-echo
+printf "\n"
 
 TESTER_OUTPUT="shell00/tester_shell00/ex09/ft_magic"
 USER_OUTPUT="shell00/user_shell00/ex09/ft_magic"
 
 if cmp -s $TESTER_OUTPUT $USER_OUTPUT; then
-	echo "--> Expected Output [OK]"
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
 else
-	echo "--> Expected Output [KO]"
+	printf $RED"--> Expected Output [KO]\n"$RESET
 fi
-echo
+printf "\n"
