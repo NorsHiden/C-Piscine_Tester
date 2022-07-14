@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 11:59:30 by nors              #+#    #+#              #
-#    Updated: 2022/07/14 19:00:17 by nors             ###   ########.fr        #
+#    Updated: 2022/07/14 19:48:24 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,9 +32,7 @@ printf $PURPLE"=================================================================
 printf "\n"
 
 printf $BLUE"Please select a letter bellow:\n"$RESET
-printf $YELLOW"a) shell00\n"$RESET
-printf $YELLOW"b) shell01\n"$RESET
-printf $YELLOW"c) c00\n"$RESET
+printf $YELLOW"a) shell00	b) shell01	c) c00\n"$RESET
 printf $PURPLE"Other days comming soon...\n"$RESET
 
 read -p "> " CHOSEN_LETTER
