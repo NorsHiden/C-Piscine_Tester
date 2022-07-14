@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/14 18:58:08 by nors              #+#    #+#              #
-#    Updated: 2022/07/14 19:01:43 by nors             ###   ########.fr        #
+#    Updated: 2022/07/14 19:45:44 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,3 +37,253 @@ else
 	printf $RED"--> Expected Files [KO]\n"$RESET
 fi
 printf "\n"
+
+gcc -Wall -Wextra -Werror c00/tester_c00/ex00/ft_putchar.c c00/main_exec/ex00_main.c -o c00/output/tester_ft_putchar_binary \
+				&& c00/output/tester_ft_putchar_binary > c00/output/tester_ft_putchar_output
+
+gcc -Wall -Wextra -Werror c00/user_c00/ex00/ft_putchar.c c00/main_exec/ex00_main.c -o c00/output/user_ft_putchar_binary \
+				&& c00/output/user_ft_putchar_binary > c00/output/user_ft_putchar_output
+
+TESTER_OUTPUT=$(cat c00/output/tester_ft_putchar_output)
+USER_OUTPUT=$(cat c00/output/user_ft_putchar_output)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
+else
+	printf $RED"--> Expected Output [KO]\n"$RESET
+fi
+printf "\n"
+
+printf $PURPLE"-------------> [TESTING_EX01...] <-------------\n"$RESET
+printf "\n"
+
+TESTER_OUTPUT=$(ls c00/tester_c00/ex01)
+USER_OUTPUT=$(ls c00/user_c00/ex01)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
+else
+	printf $RED"--> Expected Files [KO]\n"$RESET
+fi
+printf "\n"
+
+gcc -Wall -Wextra -Werror c00/tester_c00/ex01/ft_print_alphabet.c c00/main_exec/ex01_main.c -o c00/output/tester_ft_print_alphabet_binary \
+				&& c00/output/tester_ft_print_alphabet_binary > c00/output/tester_ft_print_alphabet_output
+
+gcc -Wall -Wextra -Werror c00/user_c00/ex01/ft_print_alphabet.c c00/main_exec/ex01_main.c -o c00/output/user_ft_print_alphabet_binary \
+				&& c00/output/user_ft_print_alphabet_binary > c00/output/user_ft_print_alphabet_output
+
+TESTER_OUTPUT=$(cat c00/output/tester_ft_print_alphabet_output)
+USER_OUTPUT=$(cat c00/output/user_ft_print_alphabet_output)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
+else
+	printf $RED"--> Expected Output [KO]\n"$RESET
+fi
+printf "\n"
+
+printf $PURPLE"-------------> [TESTING_ex02...] <-------------\n"$RESET
+printf "\n"
+
+TESTER_OUTPUT=$(ls c00/tester_c00/ex02)
+USER_OUTPUT=$(ls c00/user_c00/ex02)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
+else
+	printf $RED"--> Expected Files [KO]\n"$RESET
+fi
+printf "\n"
+
+gcc -Wall -Wextra -Werror c00/tester_c00/ex02/ft_print_reverse_alphabet.c c00/main_exec/ex02_main.c -o c00/output/tester_ft_print_reverse_alphabet_binary \
+				&& c00/output/tester_ft_print_reverse_alphabet_binary > c00/output/tester_ft_print_reverse_alphabet_output
+
+gcc -Wall -Wextra -Werror c00/user_c00/ex02/ft_print_reverse_alphabet.c c00/main_exec/ex02_main.c -o c00/output/user_ft_print_reverse_alphabet_binary \
+				&& c00/output/user_ft_print_reverse_alphabet_binary > c00/output/user_ft_print_reverse_alphabet_output
+
+TESTER_OUTPUT=$(cat c00/output/tester_ft_print_reverse_alphabet_output)
+USER_OUTPUT=$(cat c00/output/user_ft_print_reverse_alphabet_output)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
+else
+	printf $RED"--> Expected Output [KO]\n"$RESET
+fi
+printf "\n"
+
+printf $PURPLE"-------------> [TESTING_ex03...] <-------------\n"$RESET
+printf "\n"
+
+TESTER_OUTPUT=$(ls c00/tester_c00/ex03)
+USER_OUTPUT=$(ls c00/user_c00/ex03)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
+else
+	printf $RED"--> Expected Files [KO]\n"$RESET
+fi
+printf "\n"
+
+gcc -Wall -Wextra -Werror c00/tester_c00/ex03/ft_print_numbers.c c00/main_exec/ex03_main.c -o c00/output/tester_ft_print_numbers_binary \
+				&& c00/output/tester_ft_print_numbers_binary > c00/output/tester_ft_print_numbers_output
+
+gcc -Wall -Wextra -Werror c00/user_c00/ex03/ft_print_numbers.c c00/main_exec/ex03_main.c -o c00/output/user_ft_print_numbers_binary \
+				&& c00/output/user_ft_print_numbers_binary > c00/output/user_ft_print_numbers_output
+
+TESTER_OUTPUT=$(cat c00/output/tester_ft_print_numbers_output)
+USER_OUTPUT=$(cat c00/output/user_ft_print_numbers_output)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
+else
+	printf $RED"--> Expected Output [KO]\n"$RESET
+fi
+printf "\n"
+
+printf $PURPLE"-------------> [TESTING_ex04...] <-------------\n"$RESET
+printf "\n"
+
+TESTER_OUTPUT=$(ls c00/tester_c00/ex04)
+USER_OUTPUT=$(ls c00/user_c00/ex04)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
+else
+	printf $RED"--> Expected Files [KO]\n"$RESET
+fi
+printf "\n"
+
+gcc -Wall -Wextra -Werror c00/tester_c00/ex04/ft_is_negative.c c00/main_exec/ex04_main.c -o c00/output/tester_ft_is_negative_binary \
+				&& c00/output/tester_ft_is_negative_binary > c00/output/tester_ft_is_negative_output
+
+gcc -Wall -Wextra -Werror c00/user_c00/ex04/ft_is_negative.c c00/main_exec/ex04_main.c -o c00/output/user_ft_is_negative_binary \
+				&& c00/output/user_ft_is_negative_binary > c00/output/user_ft_is_negative_output
+
+TESTER_OUTPUT=$(cat c00/output/tester_ft_is_negative_output)
+USER_OUTPUT=$(cat c00/output/user_ft_is_negative_output)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
+else
+	printf $RED"--> Expected Output [KO]\n"$RESET
+fi
+printf "\n"
+
+printf $PURPLE"-------------> [TESTING_ex05...] <-------------\n"$RESET
+printf "\n"
+
+TESTER_OUTPUT=$(ls c00/tester_c00/ex05)
+USER_OUTPUT=$(ls c00/user_c00/ex05)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
+else
+	printf $RED"--> Expected Files [KO]\n"$RESET
+fi
+printf "\n"
+
+gcc -Wall -Wextra -Werror c00/tester_c00/ex05/ft_print_comb.c c00/main_exec/ex05_main.c -o c00/output/tester_ft_print_comb_binary \
+				&& c00/output/tester_ft_print_comb_binary > c00/output/tester_ft_print_comb_output
+
+gcc -Wall -Wextra -Werror c00/user_c00/ex05/ft_print_comb.c c00/main_exec/ex05_main.c -o c00/output/user_ft_print_comb_binary \
+				&& c00/output/user_ft_print_comb_binary > c00/output/user_ft_print_comb_output
+
+TESTER_OUTPUT=$(cat c00/output/tester_ft_print_comb_output)
+USER_OUTPUT=$(cat c00/output/user_ft_print_comb_output)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
+else
+	printf $RED"--> Expected Output [KO]\n"$RESET
+fi
+printf "\n"
+
+printf $PURPLE"-------------> [TESTING_ex06...] <-------------\n"$RESET
+printf "\n"
+
+TESTER_OUTPUT=$(ls c00/tester_c00/ex06)
+USER_OUTPUT=$(ls c00/user_c00/ex06)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
+else
+	printf $RED"--> Expected Files [KO]\n"$RESET
+fi
+printf "\n"
+
+gcc -Wall -Wextra -Werror c00/tester_c00/ex06/ft_print_comb2.c c00/main_exec/ex06_main.c -o c00/output/tester_ft_print_comb2_binary \
+				&& c00/output/tester_ft_print_comb2_binary > c00/output/tester_ft_print_comb2_output
+
+gcc -Wall -Wextra -Werror c00/user_c00/ex06/ft_print_comb2.c c00/main_exec/ex06_main.c -o c00/output/user_ft_print_comb2_binary \
+				&& c00/output/user_ft_print_comb2_binary > c00/output/user_ft_print_comb2_output
+
+TESTER_OUTPUT=$(cat c00/output/tester_ft_print_comb2_output)
+USER_OUTPUT=$(cat c00/output/user_ft_print_comb2_output)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
+else
+	printf $RED"--> Expected Output [KO]\n"$RESET
+fi
+printf "\n"
+
+printf $PURPLE"-------------> [TESTING_ex07...] <-------------\n"$RESET
+printf "\n"
+
+TESTER_OUTPUT=$(ls c00/tester_c00/ex07)
+USER_OUTPUT=$(ls c00/user_c00/ex07)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
+else
+	printf $RED"--> Expected Files [KO]\n"$RESET
+fi
+printf "\n"
+
+gcc -Wall -Wextra -Werror c00/tester_c00/ex07/ft_putnbr.c c00/main_exec/ex07_main.c -o c00/output/tester_ft_putnbr_binary \
+				&& c00/output/tester_ft_putnbr_binary > c00/output/tester_ft_putnbr_output
+
+gcc -Wall -Wextra -Werror c00/user_c00/ex07/ft_putnbr.c c00/main_exec/ex07_main.c -o c00/output/user_ft_putnbr_binary \
+				&& c00/output/user_ft_putnbr_binary > c00/output/user_ft_putnbr_output
+
+TESTER_OUTPUT=$(cat c00/output/tester_ft_putnbr_output)
+USER_OUTPUT=$(cat c00/output/user_ft_putnbr_output)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
+else
+	printf $RED"--> Expected Output [KO]\n"$RESET
+fi
+printf "\n"
+
+printf $PURPLE"-------------> [TESTING_ex08...] <-------------\n"$RESET
+printf "\n"
+
+TESTER_OUTPUT=$(ls c00/tester_c00/ex08)
+USER_OUTPUT=$(ls c00/user_c00/ex08)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Files [OK]\n"$RESET
+else
+	printf $RED"--> Expected Files [KO]\n"$RESET
+fi
+printf "\n"
+
+gcc -Wall -Wextra -Werror c00/tester_c00/ex08/ft_print_combn.c c00/main_exec/ex08_main.c -o c00/output/tester_ft_print_combn_binary \
+				&& c00/output/tester_ft_print_combn_binary > c00/output/tester_ft_print_combn_output
+
+gcc -Wall -Wextra -Werror c00/user_c00/ex08/ft_print_combn.c c00/main_exec/ex08_main.c -o c00/output/user_ft_print_combn_binary \
+				&& c00/output/user_ft_print_combn_binary > c00/output/user_ft_print_combn_output
+
+TESTER_OUTPUT=$(cat c00/output/tester_ft_print_combn_output)
+USER_OUTPUT=$(cat c00/output/user_ft_print_combn_output)
+
+if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
+	printf $GREEN"--> Expected Output [OK]\n"$RESET
+else
+	printf $RED"--> Expected Output [KO]\n"$RESET
+fi
+printf "\n"
+
+rm -f c00/output/*binary
