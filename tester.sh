@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 11:59:30 by nors              #+#    #+#              #
-#    Updated: 2022/07/14 10:05:16 by nors             ###   ########.fr        #
+#    Updated: 2022/07/14 10:25:46 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,17 +33,21 @@ printf "\n"
 
 printf $BLUE"Please select a letter bellow:\n"$RESET
 printf $YELLOW"a) shell00\n"$RESET
+printf $YELLOW"b) shell01\n"$RESET
 printf $PURPLE"Other days comming soon...\n"$RESET
 
 read -p "> " CHOSEN_LETTER
 
-if [ -z $CHOSEN_LETTER ]; then 
+if [ -z $CHOSEN_LETTER ]; then
 	exit 1
 fi
 
 if [ $CHOSEN_LETTER = "a" ]; then
 	chmod +x shell00/shell00_tester.sh
 	bash shell00/shell00_tester.sh
+elif [ $CHOSEN_LETTER = "b" ]; then
+	chmod +x shell01/shell01_tester.sh
+	bash shell01/shell01_tester.sh
 else
 	printf $RED"Invalid input\n"$RESET
 fi
