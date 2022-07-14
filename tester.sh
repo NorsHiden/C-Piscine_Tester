@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 11:59:30 by nors              #+#    #+#              #
-#    Updated: 2022/07/14 00:44:02 by nors             ###   ########.fr        #
+#    Updated: 2022/07/14 10:05:16 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ if [ -z $CHOSEN_LETTER ]; then
 fi
 
 if [ $CHOSEN_LETTER = "a" ]; then
+	chmod +x shell00/shell00_tester.sh
 	bash shell00/shell00_tester.sh
 else
 	printf $RED"Invalid input\n"$RESET

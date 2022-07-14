@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 14:05:03 by nors              #+#    #+#              #
-#    Updated: 2022/07/14 09:56:49 by nors             ###   ########.fr        #
+#    Updated: 2022/07/14 10:08:53 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -310,8 +310,17 @@ printf "\n"
 cp -R shell00/output/original_ex08_test/* shell00/tester_shell00/ex08/
 cp -R shell00/output/original_ex08_test/* shell00/user_shell00/ex08/
 
-TESTER_OUTPUT=$(bash shell00/tester_shell00/ex08/clean)
-USER_OUTPUT=$(bash shell00/user_shell00/ex08/clean)
+CURRENT_PWD=$(pwd)
+cd shell00/tester_shell00/ex08/
+
+TESTER_OUTPUT=$(bash clean)
+
+cd $CURRENT_PWD
+cd shell00/user_shell00/ex08/
+
+USER_OUTPUT=$(bash clean)
+
+cd $CURRENT_PWD
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
 	printf $GREEN"--> Expected Output [OK]\n"$RESET
