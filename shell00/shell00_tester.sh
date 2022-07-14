@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 14:05:03 by nors              #+#    #+#              #
-#    Updated: 2022/07/14 00:32:53 by nors             ###   ########.fr        #
+#    Updated: 2022/07/14 09:56:49 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -313,7 +313,6 @@ cp -R shell00/output/original_ex08_test/* shell00/user_shell00/ex08/
 TESTER_OUTPUT=$(bash shell00/tester_shell00/ex08/clean)
 USER_OUTPUT=$(bash shell00/user_shell00/ex08/clean)
 
-
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
 	printf $GREEN"--> Expected Output [OK]\n"$RESET
 else
@@ -325,9 +324,9 @@ TESTER_OUTPUT=$(ls shell00/tester_shell00/ex08)
 USER_OUTPUT=$(ls shell00/user_shell00/ex08)
 
 if [ "$TESTER_OUTPUT" = "$USER_OUTPUT" ]; then
-	printf $GREEN"--> Expected Output [OK]\n"$RESET
+	printf $GREEN"--> Expected Remaining Files [OK]\n"$RESET
 else
-	printf $RED"--> Expected Output [KO]\n"$RESET
+	printf $RED"--> Expected Remaining Files [KO]\n"$RESET
 fi
 printf "\n"
 
