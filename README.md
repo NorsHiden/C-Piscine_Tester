@@ -4,7 +4,7 @@ This tester tests all the possible cases that your script, function, or program 
 
 ## Preview
 
-![](picture)
+![preview](https://github.com/NorsHiden/C-Piscine_Tester/blob/main/preview.png)
 
 ## How does the tester work ?
 
@@ -12,7 +12,7 @@ As simple as drinking water, you only have to follow those following steps:
 
  - clone this repository wherever you want.
  - add execute permission to `tester.sh` file as follows:
- ```cd C-Piscine_tester && chmod +x tester.sh```
+ ```cd C-Piscine_Tester && chmod +x tester.sh```
  - then run `tester.sh` as follows:
  ```./tester.sh```
  - Finally, choose a module you want from tester to test.
