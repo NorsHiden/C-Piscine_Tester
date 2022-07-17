@@ -14,6 +14,7 @@ As simple as drinking water, you only have to follow those following steps:
  - add execute permission to `tester.sh` file as follows:
  ```cd C-Piscine_Tester && chmod +x tester.sh```
  - add your files to the expected directory `/{module}/user_{module}/`
+ ![preview](https://github.com/NorsHiden/C-Piscine_Tester/blob/main/put_your_files_here.png)
  - then run `tester.sh` as follows:
  ```./tester.sh```
  - Finally, choose a module you want from tester to test.
