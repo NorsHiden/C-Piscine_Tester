@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/14 18:58:08 by nors              #+#    #+#              #
-#    Updated: 2022/07/14 19:45:44 by nors             ###   ########.fr        #
+#    Updated: 2022/07/16 17:03:15 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +83,7 @@ else
 fi
 printf "\n"
 
-printf $PURPLE"-------------> [TESTING_ex02...] <-------------\n"$RESET
+printf $PURPLE"-------------> [TESTING_EX02...] <-------------\n"$RESET
 printf "\n"
 
 TESTER_OUTPUT=$(ls c00/tester_c00/ex02)
@@ -112,7 +112,7 @@ else
 fi
 printf "\n"
 
-printf $PURPLE"-------------> [TESTING_ex03...] <-------------\n"$RESET
+printf $PURPLE"-------------> [TESTING_EX03...] <-------------\n"$RESET
 printf "\n"
 
 TESTER_OUTPUT=$(ls c00/tester_c00/ex03)
@@ -141,7 +141,7 @@ else
 fi
 printf "\n"
 
-printf $PURPLE"-------------> [TESTING_ex04...] <-------------\n"$RESET
+printf $PURPLE"-------------> [TESTING_EX04...] <-------------\n"$RESET
 printf "\n"
 
 TESTER_OUTPUT=$(ls c00/tester_c00/ex04)
@@ -170,7 +170,7 @@ else
 fi
 printf "\n"
 
-printf $PURPLE"-------------> [TESTING_ex05...] <-------------\n"$RESET
+printf $PURPLE"-------------> [TESTING_EX05...] <-------------\n"$RESET
 printf "\n"
 
 TESTER_OUTPUT=$(ls c00/tester_c00/ex05)
@@ -199,7 +199,7 @@ else
 fi
 printf "\n"
 
-printf $PURPLE"-------------> [TESTING_ex06...] <-------------\n"$RESET
+printf $PURPLE"-------------> [TESTING_EX06...] <-------------\n"$RESET
 printf "\n"
 
 TESTER_OUTPUT=$(ls c00/tester_c00/ex06)
@@ -228,7 +228,7 @@ else
 fi
 printf "\n"
 
-printf $PURPLE"-------------> [TESTING_ex07...] <-------------\n"$RESET
+printf $PURPLE"-------------> [TESTING_EX07...] <-------------\n"$RESET
 printf "\n"
 
 TESTER_OUTPUT=$(ls c00/tester_c00/ex07)
@@ -257,7 +257,7 @@ else
 fi
 printf "\n"
 
-printf $PURPLE"-------------> [TESTING_ex08...] <-------------\n"$RESET
+printf $PURPLE"-------------> [TESTING_EX08...] <-------------\n"$RESET
 printf "\n"
 
 TESTER_OUTPUT=$(ls c00/tester_c00/ex08)
@@ -286,4 +286,4 @@ else
 fi
 printf "\n"
 
-rm -f c00/output/*binary
+rm -f c00/output/_binary
