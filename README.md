@@ -13,6 +13,7 @@ As simple as drinking water, you only have to follow those following steps:
  - clone this repository wherever you want.
  - add execute permission to `tester.sh` file as follows:
  ```cd C-Piscine_Tester && chmod +x tester.sh```
+ - add your files to the expected directory `/{module}/user_{module}/`
  - then run `tester.sh` as follows:
  ```./tester.sh```
  - Finally, choose a module you want from tester to test.
