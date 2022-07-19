@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/14 18:58:08 by nors              #+#    #+#              #
-#    Updated: 2022/07/16 17:03:15 by nors             ###   ########.fr        #
+#    Updated: 2022/07/18 20:02:32 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ printf $YELLOW"_______________  C00  _______________\n"$RESET
 printf "\n"
 
 sleep 1
+rm -f c00/output/user*
 
 printf $PURPLE"-------------> [TESTING_EX00...] <-------------\n"$RESET
 printf "\n"
@@ -286,4 +287,4 @@ else
 fi
 printf "\n"
 
-rm -f c00/output/_binary
+rm -f c00/output/*_binary

@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/14 10:23:28 by nors              #+#    #+#              #
-#    Updated: 2022/07/14 14:44:04 by nors             ###   ########.fr        #
+#    Updated: 2022/07/18 20:05:21 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ printf $YELLOW"_______________  SHELL01  _______________\n"$RESET
 printf "\n"
 
 sleep 1
+rm -f shell01/output/user*
 
 printf $PURPLE"-------------> [TESTING_EX01...] <-------------\n"$RESET
 printf "\n"

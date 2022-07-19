@@ -6,7 +6,7 @@
 #    By: nors <nors@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/13 11:59:30 by nors              #+#    #+#              #
-#    Updated: 2022/07/16 13:21:52 by nors             ###   ########.fr        #
+#    Updated: 2022/07/19 21:06:00 by nors             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ printf "\n"
 printf $BLUE"Please select a module bellow:\n"$RESET
 printf $YELLOW"a) shell00	b) shell01\n"$RESET
 printf $YELLOW"c) c00		d) c01\n"$RESET
+printf $YELLOW"e) c02\n"$RESET
 printf $PURPLE"Other days coming soon...\n"$RESET
 
 read -p "> " CHOSEN_LETTER
@@ -54,6 +55,9 @@ elif [ $CHOSEN_LETTER = "c" ]; then
 elif [ $CHOSEN_LETTER = "d" ]; then
 	chmod +x c01/c01_tester.sh
 	bash c01/c01_tester.sh
+elif [ $CHOSEN_LETTER = "e" ]; then
+	chmod +x c02/c02_tester.sh
+	bash c02/c02_tester.sh
 else
 	printf $RED"Invalid input\n"$RESET
 fi
